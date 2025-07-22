@@ -23,7 +23,7 @@ $postData = [
 ];
 
 // إرسال الطلب إلى واجهة Gemini API
-$ch = curl_init('https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=' . $apiKey);
+$ch = curl_init('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=' . $apiKey);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
 curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
